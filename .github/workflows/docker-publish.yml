@@ -7,17 +7,16 @@ name: Docker
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches:
+      - 'main'
   workflow_dispatch:
 
 env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -44,3 +43,5 @@ jobs:
           context: .
           push: true
           tags: user/app:latest
+          secrets: |
+            "github_token=${{ secrets.GITHUB_TOKEN }}"
