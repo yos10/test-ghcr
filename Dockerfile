@@ -15,3 +15,5 @@ USER node
 
 COPY --chown=node:node package.json ./
 RUN yarn install --ignore-optional && yarn cache clean
+
+COPY --chown=node:node . .
