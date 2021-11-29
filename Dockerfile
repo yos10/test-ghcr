@@ -14,4 +14,6 @@ WORKDIR /home/node/app
 USER node
 
 COPY --chown=node:node package.json ./
-RUN yarn install --ignore-optional && yarn cache clean
+RUN yarn install --ignore-optional && yarn cache clean \
+    && mv node_modules/ ../
+ENV PATH=/home/node/node_modules/.bin:$PATH
