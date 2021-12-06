@@ -1,2 +1,2 @@
-starter-workflows/docker-publish.yml at main · actions/starter-workflows · GitHub
-https://github.com/actions/starter-workflows/blob/main/ci/docker-publish.yml
+Dockerイメージの公開 - GitHub Docs
+https://docs.github.com/ja/actions/publishing-packages/publishing-docker-images

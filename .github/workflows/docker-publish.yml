@@ -1,14 +1,14 @@
-name: Docker
+# このワークフローはGitHubによって認定されていないアクションを使用します。
+# それらはサードパーティによって提供され、
+# 別個の利用規約、プライバシーポリシー、
+# サポートドキュメンテーションが適用されます。
 
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+name: Create and publish a Docker image
 
 on:
   push:
     branches:
-      - 'main'
+      - main
   workflow_dispatch:
 
 env:
